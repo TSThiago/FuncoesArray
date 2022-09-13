@@ -1,15 +1,15 @@
  let array = []
 
-// // Função .push:
-// // A função .push acrescenta uma "casa" no array e a preenche com a informação
-// // que estiver entre parênteses
+// // // Função .push:
+// // // A função .push acrescenta uma "casa" no array e a preenche com a informação
+// // // que estiver entre parênteses
 
-console.log(array.push(1))
+array.push(1)
 array.push(2)
 array.push(3)
-array.push(4)
+console.log(array.push(6))
 
-console.log(array)
+// console.log(array)
 
 // // Função .join([separator = '']):
 // // A função .join faz uma concatenação com as informações (que se tornam strings) dentro do array. 
@@ -52,11 +52,14 @@ console.log(arrayTeste)
 
 function ReplicandoPush(parametro){
     arrayTeste[arrayTeste.length] = parametro 
-    return parametro
+    return arrayTeste.length
 }
 
 // Função .pop
 
+function ReplicandoPop(parametro){
+    arrayTeste[arrayTeste.length]
+}
 // Função idexOf
 
 // Função includes
