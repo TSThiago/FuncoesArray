@@ -1,13 +1,13 @@
- let array = []
+// let array = []
 
 // // // Função .push:
 // // // A função .push acrescenta uma "casa" no array e a preenche com a informação
 // // // que estiver entre parênteses
 
-array.push(1)
-array.push(2)
-array.push(3)
-console.log(array.push(6))
+// array.push(1)
+// array.push(2)
+// array.push(3)
+// console.log(array.push(6))
 
 // console.log(array)
 
@@ -44,10 +44,12 @@ console.log(array.push(6))
 
 // Parte 2 - Replicando as funções
 
-let arrayTeste = []
+let arrayTeste = [3,5,7,2,1]
 
-console.log(ReplicandoPush(2))
 console.log(arrayTeste)
+console.log(ReplicandoPop())
+console.log(arrayTeste)
+
 // Função .push
 
 function ReplicandoPush(parametro){
@@ -57,9 +59,19 @@ function ReplicandoPush(parametro){
 
 // Função .pop
 
-function ReplicandoPop(parametro){
-    arrayTeste[arrayTeste.length]
+function ReplicandoPop(){
+    let arrayAux = []
+    let numeroRetirado = arrayTeste[arrayTeste.length - 1] 
+    arrayTeste[arrayTeste.length - 1] = null
+    for(let index = 0; index < arrayTeste.length; index++){
+        if(arrayTeste[index] != null){
+            arrayAux[index] = arrayTeste[index]
+        }
+    }
+    arrayTeste = arrayAux
+    return numeroRetirado
 }
+
 // Função idexOf
 
 // Função includes
