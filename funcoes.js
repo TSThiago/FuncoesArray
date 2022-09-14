@@ -47,8 +47,8 @@
 let arrayTeste = [3,5,7,2,1]
 
 console.log(arrayTeste)
-console.log(ReplicandoPop())
-console.log(arrayTeste)
+console.log(ReplicandoIndexOf(9))
+
 
 // Função .push
 
@@ -72,6 +72,15 @@ function ReplicandoPop(){
     return numeroRetirado
 }
 
-// Função idexOf
+// Função indexOf
+
+function ReplicandoIndexOf(parametro){
+    for(let index = 0; index < arrayTeste.length; index++){
+        if(parametro == arrayTeste[index]){
+            return index
+        }
+    }
+    return -1
+}
 
 // Função includes
