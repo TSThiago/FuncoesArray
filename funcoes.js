@@ -47,7 +47,7 @@
 let arrayTeste = [3,5,7,2,1]
 
 console.log(arrayTeste)
-console.log(ReplicandoIndexOf(9))
+console.log(ReplicandoIncludes(9))
 
 
 // Função .push
@@ -84,3 +84,12 @@ function ReplicandoIndexOf(parametro){
 }
 
 // Função includes
+
+function ReplicandoIncludes(parametro){
+    for(let index = 0; index < arrayTeste.length; index++){
+        if(parametro == arrayTeste[index]){
+            return true
+        }
+    }
+    return false
+}
