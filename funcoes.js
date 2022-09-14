@@ -47,8 +47,7 @@
 let arrayTeste = [3,5,7,2,1]
 
 console.log(arrayTeste)
-console.log(ReplicandoIncludes(9))
-
+console.log(ReplicandoPop())
 
 // Função .push
 
@@ -62,11 +61,8 @@ function ReplicandoPush(parametro){
 function ReplicandoPop(){
     let arrayAux = []
     let numeroRetirado = arrayTeste[arrayTeste.length - 1] 
-    arrayTeste[arrayTeste.length - 1] = null
-    for(let index = 0; index < arrayTeste.length; index++){
-        if(arrayTeste[index] != null){
-            arrayAux[index] = arrayTeste[index]
-        }
+    for(let index = 0; index < arrayTeste.length - 1; index++){
+    arrayAux.push(arrayTeste[index])
     }
     arrayTeste = arrayAux
     return numeroRetirado
