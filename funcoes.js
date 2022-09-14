@@ -47,7 +47,8 @@
 let arrayTeste = [3,5,7,2,1]
 
 console.log(arrayTeste)
-console.log(ReplicandoPop())
+ReplicandoSort()
+
 
 // Função .push
 
@@ -88,4 +89,19 @@ function ReplicandoIncludes(parametro){
         }
     }
     return false
+}
+
+// Função .sort
+
+function ReplicandoSort(){
+    let varAux = 0
+    for(atual = 0; atual < arrayTeste.length - 1; atual++){
+        for(seguinte = atual + 1; seguinte < arrayTeste.length; seguinte++){
+            if(arrayTeste[atual] > arrayTeste[seguinte]){
+                varAux = arrayTeste[atual]
+                arrayTeste[atual] = arrayTeste[seguinte]
+                arrayTeste[seguinte] = varAux
+            }
+        }
+    }
 }
